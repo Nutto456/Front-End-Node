@@ -3,30 +3,28 @@
 <html>
 <head>
     <title>Books</title>
-    <link rel="stylesheet" href="../public/css/style.css">
 </head>
-<center>
 <body>
     <h1>Books</h1>
+    <link rel="stylesheet" href="../CSS/style.css">
     <table>
         <tr>
-            <td>Title</td>
-            <td>Author</td>
-            <td>Actions</td>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Actions</th>
         </tr>
         <% for(var i=0; i < books.length; i++) { %>
             <tr>
                 <td><%= books[i].title %></td>
                 <td><%= books[i].author %></td>
                 <td>
-                    <a href="/book/<%= books[i].id %>">View</a>
+                    <a href="/book/<%= books [i].id %>">View</a>
                     <a href="/update/<%= books[i].id %>">Edit</a>
                     <a href="/delete/<%= books[i].id %>">Delete</a>
                 </td>
             </tr>
         <% } %>
     </table>
-    <a href="/create">Create New Book</a>
-</body> 
-</center>
+    <center><a href="/create">Create New Book</a></center>
+</body>
 </html>

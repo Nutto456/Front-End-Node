@@ -3,14 +3,15 @@
 <html>
 <head>
     <title>Book</title>
-    <link rel="stylesheet" href="../public/css/style.css">
 </head>
-<center><body>
+<body>
+    <center>
+    <link rel="stylesheet" href="../CSS/style.css">
     <h1><%= book.title %></h1>
     <p>Author: <%= book.author %></p>
     <a href="/update/<%= book.id %>">Edit</a>
     <a href="/delete/<%= book.id %>">Delete</a>
-    <a href="/">Back to List</a>
+    <a href="/">Back To List</a>
+    </center>
 </body>
-</center>
 </html>
