@@ -1,20 +1,15 @@
-
-
-
 const express = require('express');
 const axios = require('axios');
+var bodyParser = require('body-parser');
+const path = require("path");
 const app = express();
-const bodyParser = require('body-parser');
 
+const base_url = 'http://localhost:3000';
 
-
-const base_url = 'http://node50124-env-7377511.proen.app.ruk-com.cloud:11472';
-
-
+app.set("views", path.join(__dirname, "/public/views"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-
 
 app.use(express.static(__dirname + '/public'));
 
@@ -85,6 +80,6 @@ app.get("/delete/:id", async (req, res) => {
     }
 });
 
-app.listen(4000, () => {
-    console.log('Listening on port 4000');
+app.listen(8080, () => {
+    console.log('Listening on port 8080');
 });
